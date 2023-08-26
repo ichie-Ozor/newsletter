@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  display: flex;
+  /* text-align: center; */
+  background-color: rgb(73, 56, 88);
+  height: 100vh;
+}
+
+

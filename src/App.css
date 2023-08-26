@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800;900&family=Roboto:wght@400;700;900&display=swap');
+.App {
+  position: relative;
+  display: block;
+  background: #fff;
+  left: 600px;
+  top: 20px;
+  width: 400px;
+  height: 45rem;
+}
+.mobile{
+  width: 400px;
+}
+.desktop{
+  display: none;
+}
+.update-container>h1{
+  position: relative;
+  left: 25px;
+  font-family: "Roboto";
+  font-weight: 700;
+  color: rgb(31, 7, 53, 0.9);
+}
+.update-container-text{
+  position: relative;
+  width: 300px;
+  font-weight: 400;
+  left: 27px;
+}
+.update-container-item{
+  position: relative;
+  display: flex;
+  margin: -12px;
+  left: 27px;
+}
+.update-container-item>img{
+  position: relative;
+  display: flex;
+  margin-right: 30px;
+  left: 20px;
+}
+.email>p{
+  position: relative;
+  left: 20px;
+  margin: 20px 0 10px 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+.input{
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  left: 20px;
+}
+.input>input{
+  width: 350px;
+  height: 45px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  align-items: center;
+}
+.input>button{
+  width: 355px;
+  height: 47px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  align-items: center;
+  color: #fff;
+  background: rgb(12, 12, 43);
+}
+.errorMessage{
+  position: relative;
+  display: flex;
+  top: -3px;
+  left: 230px;
+  color: red;
+  margin: 3px;
+  margin-top: -12px;
+  display: none;
+}
+input:not(:focus):not(:placeholder-shown):invalid ~ .errorMessage{
+  display: block;
+}
+input:not(:focus):not(:placeholder-shown):invalid{
+  border: 2px solid red;
+  box-shadow: 2px 1px red;
+}
