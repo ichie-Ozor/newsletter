@@ -59,6 +59,7 @@
   border-radius: 5px;
   border: 1px solid grey;
   align-items: center;
+  cursor: pointer;
 }
 .input>button{
   width: 355px;
@@ -68,12 +69,18 @@
   align-items: center;
   color: #fff;
   background: rgb(12, 12, 43);
+  cursor: pointer;
+}
+.input>button:hover{
+  background: linear-gradient(to right, rgba(241, 66, 66, 0.7), rgba(241, 66, 66, 1))
 }
 .errorMessage{
   position: relative;
   display: flex;
-  top: -3px;
-  left: 230px;
+  top: -70px;
+  left: 235px;
+  font-size: 12px;
+  font-weight: 600;
   color: red;
   margin: 3px;
   margin-top: -12px;
@@ -84,5 +91,126 @@ input:not(:focus):not(:placeholder-shown):invalid ~ .errorMessage{
 }
 input:not(:focus):not(:placeholder-shown):invalid{
   border: 2px solid red;
-  box-shadow: 2px 1px red;
+}
+.success{
+padding-top: 120px;
+padding-left: 20px;
+}
+.done{
+  position: relative;
+  background: rgb(241, 66, 66);
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.done-img{
+  position: relative;
+  width: 50px;
+  height: 40px;
+  top: 6px;
+}
+.success>h1{
+  width: 200px;
+  color: rgba(11, 11, 63, 0.8);
+  font-family: "Roboto";
+}
+.success>p{
+  width: 270px;
+  line-height: 20px;
+  color: rgb(11, 11, 63);
+  font-family: "Roboto";
+}
+.success>p>span{
+  font-weight: 700;
+}
+.success-button{
+  position: relative;
+  width: 350px;
+  height: 50px;
+  top: 180px;
+  background: rgb(32, 32, 71);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media screen and (min-width: 480px){
+  .App {
+    position: relative;
+    display: block;
+    background: #fff;
+    left: 600px;
+    top: 20px;
+    width: 600px;
+    height: 25rem;
+    border-radius: 10px;
+  }
+  .mobile{
+    display: none;
+  }
+  .desktop{
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    height: 350px;
+    display: block;
+    width: 300px;
+  }
+  .update-container>h1{
+    font-size: 25px;
+    top: 50px;
+  }
+  .update-container-text{
+    width: 300px;
+    top: 40px;
+  }
+  .update-container-item{
+    top: 35px;
+   left: 18px;
+  }
+  .update-container-item>p{
+    font-size: 14px;
+  }
+  .update-container-item>img{
+   width: 16px;
+  }
+  .email>p{
+    top: 22px;
+    left: 25px;
+  }
+  .input>input{
+    position: relative;
+    top: 20px;
+    width: 270px;
+    height: 30px;
+  }
+  .input>button{
+    position: relative;
+    top: 10px;
+    width: 280px;
+    height: 35px;
+  }
+  .errorMessage{
+    top: -35px;
+    left: 185px;
+    font-size: 10px;
+    font-weight: 500;
+    display: none;
+  }
+  .success{
+    padding-top: 40px;
+    padding-left: 80px;
+  }
+  .success>p{
+    width: 350px;
+    font-size: 16px;
+  }
+  .success-button{
+    width: 350px;
+    height: 50px;
+    top: 10px;
+  }
+  .success-button:hover{
+    background: linear-gradient(to right, rgba(241, 66, 66, 0.7), rgba(241, 66, 66, 1));
+  }
 }
