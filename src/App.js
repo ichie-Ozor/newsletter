@@ -28,7 +28,7 @@ function App() {
   }
 
 
-  console.log(clicked)
+  
   console.log("see me here", email)
 
 const onChange = (e) => {
