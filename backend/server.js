@@ -2,12 +2,7 @@ import Express from 'express';
 import { connectDb } from  './config/connectDb.js'
 import { accountRoute } from './route/accountRoute.js'
 import dotenv from 'dotenv'
-// this two lines below is used to solve error arising when you use "type": "module" in package.json. it does not allow "require" which is a js method
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
 dotenv.config()
-
-const cors = require("cors")
 
 
 const PORT = process.env.PORT
@@ -16,12 +11,12 @@ const app = Express();
 app.use(Express.json())
 
 
-app.use(
-    cors({
-        origin: "http://localhost:3000",
-        method: ["POST"],
-    })
-)
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'http://172.20.10.7:8000');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+  });
 
 app.get('/', (req, res) => {
     res.json({

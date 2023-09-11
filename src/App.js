@@ -6,35 +6,41 @@ import Update from './update.js';
 
 
 function App() {
+  const [formData, setFormData] = useState();
   const [email, setEmail] = useState()
   const [clicked, setClicked] = useState(false)
+
+  const onChange = (e) => {
+    setFormData({
+      email: e.target.value
+    })
+    setEmail(e.target.value)
+    console.log(e.target.value)
+  }
 
   const onSubmitHandler1 = async(event) => {
     event.preventDefault()
     try{
+      console.log(formData)
       const response = await fetch('http://localhost:8000/account', {
         method: 'POST',
-        header: {
+        headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(email),
+        body: JSON.stringify(formData),
       });
       const result = await response.json()
       console.log("success:", result)
     } catch (error){
-      console.log("Error:", error, "here")
+      console.log("Error:", error)
     }
     setClicked(true)
   }
 
 
   
-  console.log("see me here", email)
+  // console.log("see me here", email)
 
-const onChange = (e) => {
-  setEmail(e.target.value)
-  console.log(e)
-}
 
 const onClick1 = () => {
   setClicked(false)
